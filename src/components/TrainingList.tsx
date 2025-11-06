@@ -3,6 +3,7 @@ import type { TrainingWithCustomer } from "../types";
 import { DataGrid } from "@mui/x-data-grid";
 import type { GridColDef } from "@mui/x-data-grid";
 import { fetchTrainingsWithCustomer } from "../trainingapi";
+import DeleteTraining from "./DeleteTraining";
 import dayjs from "dayjs";
 
 function TrainingList() {
@@ -11,6 +12,15 @@ function TrainingList() {
   const formatDate = (iso: string) => dayjs(iso).format("DD.MM.YYYY HH:mm");
 
   const columns: GridColDef<TrainingWithCustomer>[] = [
+    {
+      field: "actions",
+      headerName: "Action",
+      width: 80,
+      sortable: false,
+      renderCell: (params) => (
+        <DeleteTraining getTrainings={getTrainings} trainingRow={params.row} />
+      )
+    },
     { field: "activity", headerName: "Activity", width: 180 },
     { 
       field: "date", 

@@ -36,6 +36,13 @@ export type Training = {
   };
 };
 
+export type TrainingForm = {
+  date: string;
+  activity: string;
+  duration: number;
+  customer: string;
+};
+
 export type TrainingsResponse = {
   _embedded: {
     trainings: Training[];
