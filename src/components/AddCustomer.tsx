@@ -43,7 +43,15 @@ export default function AddCustomer({ getCustomers }: AddCustomerProps) {
 
   return (
     <>
-      <Button variant="outlined" onClick={handleClickOpen}>
+      <Button
+        variant="outlined"
+        onClick={handleClickOpen}
+        sx={{
+          borderColor: '#19d2adff',
+          color: '#19d2adff'
+        
+        }}
+      >
         Add Customer
       </Button>
       <Dialog open={open} onClose={handleClose}>

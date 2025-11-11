@@ -23,8 +23,8 @@ function Calendar() {
             return {
                 id: training.id.toString(),
                 title: `${training.activity} / ${training.customer.firstname} ${training.customer.lastname}`,
-                start: startDate.toString(),
-                end: endDate.toString(),
+                start: startDate.toISOString(),
+                end: endDate.toISOString(),
             };
         });
 
@@ -51,6 +51,8 @@ function Calendar() {
           meridiem: "short",
         }}
         height="auto"
+        eventColor="#19d2adff"
+      
       />
     </div>
   );

@@ -12,7 +12,7 @@ export default function App() {
     <>
       <CssBaseline/>
       
-      <AppBar position="fixed" sx={{ left: 0, right: 0 }}>
+      <AppBar position="fixed" sx={{ left: 0, right: 0, backgroundColor: '#19d2adff' }}>
         <Toolbar>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             Training Management

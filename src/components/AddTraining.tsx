@@ -57,7 +57,16 @@ export default function AddTraining({ customer, onSuccess }: AddTrainingProps) {
 
   return (
     <>
-      <Button size="small" variant="outlined" onClick={handleClickOpen}>
+      <Button
+        size="small"
+        variant="outlined"
+        onClick={handleClickOpen}
+        sx={{
+          borderColor: '#19d2adff',
+          color: '#19d2adff'
+          
+        }}
+      >
         Add Training
       </Button>
       <Dialog open={open} onClose={handleClose}>
