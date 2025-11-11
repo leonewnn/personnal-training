@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Link, Outlet } from "react-router";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";

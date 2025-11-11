@@ -1,4 +1,4 @@
-import type { CustomersResponse, CustomerForm } from "./types";
+import type {CustomerForm } from "./types";
 
 export const fetchCustomers = () => {
   return fetch(import.meta.env.VITE_API_URL + "/customers")

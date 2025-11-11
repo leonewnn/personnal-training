@@ -33,7 +33,7 @@ function TrainingList() {
       field: "customer", 
       headerName: "Customer", 
       width: 200,
-      valueGetter: (value, row) => `${row.customer.firstname} ${row.customer.lastname}`
+      valueGetter: (_value, row) => `${row.customer.firstname} ${row.customer.lastname}`
     }
   ];
 

@@ -1,4 +1,4 @@
-import type { TrainingsResponse, TrainingWithCustomer, TrainingForm } from "./types";
+import type {TrainingForm } from "./types";
 
 export const fetchTrainings = () => {
   return fetch(import.meta.env.VITE_API_URL + "/trainings")
