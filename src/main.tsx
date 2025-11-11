@@ -5,6 +5,7 @@ import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import TrainingList from './components/TrainingList';
 import CustomerList from './components/CustomerList';
+import Calendar from './components/Calendar';
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         path: "/trainings",
 
         },
+      {
+        element: <Calendar/>,
+        path: "/calendar"
+      },
         { index : true, element: <CustomerList/> }
     ]
   }

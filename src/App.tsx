@@ -26,6 +26,9 @@ export default function App() {
             <Button color="inherit" component={Link} to="/trainings">
               Trainings
             </Button>
+            <Button color="inherit" component={Link} to="/calendar">
+              Calendar
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
