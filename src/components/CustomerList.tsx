@@ -17,6 +17,7 @@ function CustomerList() {
       headerName: "Action",
       width: 120,
       sortable: false,
+      disableExport: true,
       renderCell: (params) => (
         <>
           <EditCustomer getCustomers={getCustomers} customerRow={params.row} />
@@ -29,6 +30,7 @@ function CustomerList() {
       headerName: "Training",
       width: 150,
       sortable: false,
+      disableExport: true,
       renderCell: (params) => (
         <AddTraining customer={params.row} onSuccess={getCustomers} />
       )
