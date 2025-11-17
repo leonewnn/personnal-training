@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart, registerables } from 'chart.js';
-import _ from 'lodash';
+import { groupBy, map, sumBy } from 'lodash';
 import { fetchTrainingsWithCustomer } from "../trainingapi";
 import type { TrainingWithCustomer, ActivityStat } from "../types";
 
 Chart.register(...registerables);
-
-
 
 function Statistics() {
   const [trainings, setTrainings] = useState<TrainingWithCustomer[]>([]);
@@ -18,11 +16,11 @@ function Statistics() {
       .catch(err => console.error(err));
   }, []);
 
-  const grouped = _.groupBy(trainings, 'activity');
+  const grouped = groupBy(trainings, 'activity');
   
-  const stats: ActivityStat[] = _.map(grouped, (items, activity) => ({
+  const stats: ActivityStat[] = map(grouped, (items, activity) => ({
     activity,
-    totalMinutes: _.sumBy(items, 'duration')
+    totalMinutes: sumBy(items, 'duration')
   }));
 
   const chartData = {
@@ -31,7 +29,7 @@ function Statistics() {
       label: 'Minutes',
       data: stats.map((stat: ActivityStat) => stat.totalMinutes),
       backgroundColor: '#19d2adff',
-      borderColor: '#19d2adff',
+      borderColor: '#000000ff',
       borderWidth: 1
     }]
   };
