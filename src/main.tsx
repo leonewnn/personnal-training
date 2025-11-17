@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router';
 import TrainingList from './components/TrainingList';
 import CustomerList from './components/CustomerList';
 import Calendar from './components/Calendar';
+import Statistics from './components/Statistics';
 
 
 const router = createBrowserRouter([
@@ -13,17 +14,19 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-
       {
-        element: <TrainingList/>,
+        element: <TrainingList />,
         path: "/trainings",
-
-        },
+      },
       {
-        element: <Calendar/>,
+        element: <Calendar />,
         path: "/calendar"
       },
-        { index : true, element: <CustomerList/> }
+      {
+        element: <Statistics />,
+        path: "/statistics"
+      },
+      { index: true, element: <CustomerList /> }
     ]
   }
 ]);

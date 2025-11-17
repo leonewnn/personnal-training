@@ -72,3 +72,8 @@ export type CalendarEvent = {
   start: string;
   end: string;
 };
+
+export type ActivityStat = {
+  activity: string;
+  totalMinutes: number;
+};
